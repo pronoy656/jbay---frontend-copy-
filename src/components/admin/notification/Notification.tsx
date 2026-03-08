@@ -49,7 +49,7 @@ const NOTIFICATIONS_DATA: Notification[] = [
 
 export default function Notification() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [notifications, setNotifications] = useState(NOTIFICATIONS_DATA);
+  const [notifications] = useState(NOTIFICATIONS_DATA);
 
   const filteredNotifications = notifications.filter((notification) =>
     notification.message.toLowerCase().includes(searchQuery.toLowerCase())

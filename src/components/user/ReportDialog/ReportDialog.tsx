@@ -13,13 +13,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useDropzone } from "react-dropzone";
 import { toast } from "sonner"; // Sonner toast
 import FillButton from "@/components/common/Button/FillButton";
+import Image from "next/image";
 
 // ------------------------------------------------------------
 // Zod schema
@@ -220,9 +220,11 @@ export default function ReportDialog() {
               <div className="flex flex-wrap gap-2 mt-3">
                 {images.map((src, i) => (
                   <div key={i} className="relative group">
-                    <img
+                    <Image
                       src={src}
                       alt={`Upload ${i + 1}`}
+                      width={80}
+                      height={80}
                       className="h-20 w-20 object-cover rounded-lg border border-white/20"
                     />
                     <button

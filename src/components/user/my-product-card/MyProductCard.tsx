@@ -2,7 +2,7 @@
 "use client";
 
 import DynamicAlertDialog from "@/components/common/DynamicAlertDialog/DynamicAlertDialog";
-import { Bookmark, Pen, Trash2, Eye } from "lucide-react";
+import { Bookmark, Pen, Trash2 } from "lucide-react";
 import Image from "next/image";
 import ProductViewDialog from "../ProductViewDialog/ProductViewDialog";
 import { useBookmark } from "@/intregration/Bookmark";
@@ -50,17 +50,15 @@ export default function MyProductCard({ product }: { product: Product }) {
       {/* Bookmark Button */}
       <button
         onClick={handleBookmarkClick}
-        aria-label={`${isBookmarked ? "Remove" : "Add"} ${
-          product.name
-        } to bookmarks`}
+        aria-label={`${isBookmarked ? "Remove" : "Add"} ${product.name
+          } to bookmarks`}
         className="absolute top-4 right-4 p-2 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/10 hover:border-white/30 z-10"
       >
         <Bookmark
-          className={`w-5 h-5 transition-all duration-200 ${
-            isBookmarked
+          className={`w-5 h-5 transition-all duration-200 ${isBookmarked
               ? "text-yellow-400 fill-current"
               : "text-white/70 hover:text-yellow-400"
-          }`}
+            }`}
         />
       </button>
 
@@ -74,9 +72,8 @@ export default function MyProductCard({ product }: { product: Product }) {
           height={246}
         />
         <div
-          className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold border ${
-            STATUS_COLORS[product.status]
-          }`}
+          className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold border ${STATUS_COLORS[product.status]
+            }`}
         >
           {product.status}
         </div>

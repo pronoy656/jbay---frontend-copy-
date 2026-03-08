@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 
 interface LineShadowTextProps
   extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
-    MotionProps {
+  MotionProps {
   shadowColor?: string
   as?: React.ElementType
 }
@@ -27,7 +27,7 @@ export function LineShadowText({
 
   return (
     <MotionComponent
-      style={{ "--shadow-color": "#5BB349" } as React.CSSProperties}
+      style={{ "--shadow-color": shadowColor } as React.CSSProperties}
       className={cn(
         "relative z-0 inline-flex",
         "after:absolute after:top-[0.04em] after:left-[0.04em] after:content-[attr(data-text)]",
