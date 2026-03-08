@@ -1,3 +1,4 @@
+import RecentReports from "@/components/admin/overview/recentReports/RecentReports";
 import StatsCards from "@/components/admin/overview/statsCards/StatsCards";
 import TopCategory from "@/components/admin/overview/topCategory/TopCategory";
 import TopProducts from "@/components/admin/overview/topProducts/TopProducts";
@@ -18,6 +19,9 @@ export default function Page() {
       <div className="grid gap-6 lg:grid-cols-2">
         <TopProducts />
         <TopCategory />
+      </div>
+      <div>
+        <RecentReports />
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
