@@ -2,90 +2,56 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ChevronDown, X } from "lucide-react";
 import Header from "@/components/common/Header/Header";
 import styles from "./Faq.module.css";
-import axiosPublic from "@/utils/axiosPublic"; // <-- adjust path if needed
 
 // -----------------------------------------------------------------
-// Types – match the real API shape
+// Static FAQ Data to prevent 404 fetch errors on Vercel
 // -----------------------------------------------------------------
-interface FAQ {
-  _id: string;
-  question: string;
-  answer: string;
-  image: string;
-  // any other fields you might use (isActive, createdAt, …)
-}
-
-interface FaqApiResponse {
-  success: boolean;
-  message: string;
-  data: FAQ[];
-}
+const STATIC_FAQS = [
+  {
+    _id: "68fa90016fa0cb61c8308201",
+    question: "How long does it take to receive my order?",
+    answer: "Delivery usually takes 1-2 working days within the city and 3-5 working days for nationwide orders. For international shipments, delivery may take 7-14 days, depending on location and courier service.",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop",
+  },
+  {
+    _id: "68fa90016fa0cb61c8308202",
+    question: "What payment methods do you accept?",
+    answer: "We accept all major credit cards, PayPal, Apple Pay, Google Pay, and bank transfers. All transactions are secure and encrypted.",
+    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&h=400&fit=crop",
+  },
+  {
+    _id: "68fa90016fa0cb61c8308203",
+    question: "Do you offer returns or exchanges?",
+    answer: "Yes! You can return or exchange any item within 30 days of delivery. The product must be unused and in original packaging.",
+    image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&h=400&fit=crop",
+  },
+  {
+    _id: "68fa90016fa0cb61c8308204",
+    question: "Is there a warranty on products?",
+    answer: "All products come with a minimum 1-year warranty. Extended warranty options are available at checkout.",
+    image: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=600&h=400&fit=crop",
+  },
+  {
+    _id: "68fa90016fa0cb61c8308205",
+    question: "How can I track my order?",
+    answer: "Once your order ships, you’ll receive a tracking link via email and SMS. You can also track it directly from your account dashboard.",
+    image: "https://images.unsplash.com/photo-1605732562742-3023a888e56e?w=600&h=400&fit=crop",
+  }
+];
 
 // -----------------------------------------------------------------
 const Faq: React.FC = () => {
-  const [faqs, setFaqs] = useState<FAQ[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  // -----------------------------------------------------------------
-  // Fetch FAQs
-  // -----------------------------------------------------------------
-  useEffect(() => {
-    const fetchFAQs = async () => {
-      try {
-        setLoading(true);
-
-        // NOTE: endpoint must return the JSON you posted
-        const response = await axiosPublic.get<FaqApiResponse>(
-          "home/faqs.json"
-        );
-
-        // <-- IMPORTANT: extract the array
-        setFaqs(response.data.data);
-        setError(null);
-      } catch (err: any) {
-        const msg =
-          err?.response?.data?.message || err?.message || "Failed to load FAQs";
-        setError(msg);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchFAQs();
-  }, []);
 
   const getNumberPrefix = (num: number): string =>
     num < 10 ? `0${num}` : `${num}`;
 
   const handleToggle = (index: number) =>
     setActiveIndex(activeIndex === index ? null : index);
-
-  // -----------------------------------------------------------------
-  // Loading / Error UI
-  // -----------------------------------------------------------------
-  if (loading) {
-    return (
-      <div className="text-white my-20 text-center">
-        <Header heading="Frequently Asked Question" />
-        <p className="mt-8 text-gray-400">Loading FAQs...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="text-white my-20 text-center">
-        <Header heading="Frequently Asked Question" />
-        <p className="mt-8 text-red-400">{error}</p>
-      </div>
-    );
-  }
 
   // -----------------------------------------------------------------
   // Main FAQ list
@@ -95,7 +61,7 @@ const Faq: React.FC = () => {
       <Header heading="Frequently Asked Question" />
 
       <div className="space-y-0">
-        {faqs.map((faq, index) => (
+        {STATIC_FAQS.map((faq, index) => (
           <div
             key={faq._id}
             className={`${styles.faqItem} border-t border-gray-700/50`}
@@ -120,9 +86,8 @@ const Faq: React.FC = () => {
               </div>
 
               <div
-                className={`flex-shrink-0 ml-4 ${styles.faqIcon} ${
-                  activeIndex === index ? styles.open : ""
-                }`}
+                className={`flex-shrink-0 ml-4 ${styles.faqIcon} ${activeIndex === index ? styles.open : ""
+                  }`}
               >
                 {activeIndex === index ? (
                   <div
@@ -145,9 +110,8 @@ const Faq: React.FC = () => {
 
             {/* ---------- CONTENT ---------- */}
             <div
-              className={`${styles.faqContent} ${
-                activeIndex === index ? styles.open : ""
-              }`}
+              className={`${styles.faqContent} ${activeIndex === index ? styles.open : ""
+                }`}
             >
               <div className="pb-8 pl-0 md:pl-32">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
