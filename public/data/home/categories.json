@@ -1,0 +1,72 @@
+[
+    {
+        "src": "/images/x.com/1.jpg",
+        "alt": "Car Engine Parts",
+        "code": "#01",
+        "category": "Engine & Performance",
+        "description": "Essential engine components including pistons, spark plugs, and turbochargers for powerful performance."
+    },
+    {
+        "src": "/images/x.com/2.jpg",
+        "alt": "Brake and Suspension System",
+        "code": "#02",
+        "category": "Brakes & Suspension",
+        "description": "Durable brake pads, rotors, and suspension kits for smooth handling and safety on every drive."
+    },
+    {
+        "src": "/images/x.com/3.jpg",
+        "alt": "Electrical and Lighting Parts",
+        "code": "#03",
+        "category": "Electrical & Lighting",
+        "description": "High-quality batteries, alternators, and LED lights ensuring bright visibility and reliable power flow."
+    },
+    {
+        "src": "/images/x.com/4.jpg",
+        "alt": "Tires and Wheels",
+        "code": "#04",
+        "category": "Tires & Wheels",
+        "description": "All-season tires and stylish alloy wheels designed for grip, control, and improved performance."
+    },
+    {
+        "src": "/images/x.com/5.jpg",
+        "alt": "Car Body & Exterior",
+        "code": "#05",
+        "category": "Body & Exterior",
+        "description": "Bumpers, mirrors, grilles, and spoilers for enhanced aerodynamics and a bold exterior look."
+    },
+    {
+        "src": "/images/x.com/1.jpg",
+        "alt": "Car Interior Accessories",
+        "code": "#06",
+        "category": "Interior Accessories",
+        "description": "Premium seat covers, steering covers, and floor mats that add comfort and elegance to your car’s cabin."
+    },
+    {
+        "src": "/images/x.com/2.jpg",
+        "alt": "Cooling System Parts",
+        "code": "#07",
+        "category": "Cooling & Heating",
+        "description": "Radiators, condensers, and compressors that help maintain engine temperature and cabin comfort."
+    },
+    {
+        "src": "/images/x.com/3.jpg",
+        "alt": "Transmission and Drivetrain",
+        "code": "#08",
+        "category": "Transmission & Drivetrain",
+        "description": "Clutches, axles, and gearboxes that ensure smooth gear transitions and efficient power delivery."
+    },
+    {
+        "src": "/images/x.com/4.jpg",
+        "alt": "Fuel and Air System",
+        "code": "#09",
+        "category": "Fuel & Air System",
+        "description": "Air filters, fuel pumps, and intakes to boost mileage and engine breathing for better efficiency."
+    },
+    {
+        "src": "/images/x.com/1.jpg",
+        "alt": "Safety and Security Systems",
+        "code": "#11",
+        "category": "Safety & Security",
+        "description": "Parking sensors, airbags, and alarm systems that enhance safety and protection for every journey."
+    }
+]

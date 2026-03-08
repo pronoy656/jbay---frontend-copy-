@@ -1,0 +1,74 @@
+/* components/Faq/Faq.module.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+.faqContent {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.6s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1),
+    transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.faqContent.open {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faqIcon {
+  transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.faqIcon.open {
+  transform: rotate(180deg);
+}
+
+.faqItem {
+  transition: background-color 0.4s ease;
+}
+
+.faqHeader {
+  transition: color 0.3s ease;
+}
+
+.iconCircle {
+  transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.faqNumber {
+  background: linear-gradient(135deg, #666 0%, #999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.4s ease;
+}
+
+.faqItem:hover .faqNumber {
+  background: linear-gradient(135deg, #888 0%, #bbb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: scale(1.05);
+}
+
+.premiumBorder {
+  position: relative;
+}
+
+.premiumBorder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+  transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.faqItem:hover .premiumBorder::after {
+  width: 100%;
+}

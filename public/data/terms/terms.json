@@ -1,0 +1,42 @@
+{
+    "success": true,
+    "message": "Terms retrieved",
+    "data": [
+        {
+            "_id": "690a5ab265258384a71a3836",
+            "title": "Community Guidelines",
+            "content": "All users must maintain respectful communication and avoid inappropriate content or behavior within the platform.",
+            "isActive": true,
+            "createdAt": "2025-11-04T19:57:38.789Z",
+            "updatedAt": "2025-11-04T19:57:38.789Z",
+            "__v": 0
+        },
+        {
+            "_id": "68fe825ac3e0b9b78196825a",
+            "title": "Community Guidelines",
+            "content": "All users must maintain respectful communication and avoid inappropriate content or behavior within the platform.",
+            "isActive": true,
+            "createdAt": "2025-10-26T20:19:38.758Z",
+            "updatedAt": "2025-10-26T20:19:38.758Z",
+            "__v": 0
+        },
+        {
+            "_id": "68fe8246c3e0b9b781968256",
+            "title": "Privacy Policy",
+            "content": "We are committed to protecting your personal information. Please read this policy to understand how your data is collected, used, and stored.",
+            "isActive": true,
+            "createdAt": "2025-10-26T20:19:18.238Z",
+            "updatedAt": "2025-10-26T20:19:18.238Z",
+            "__v": 0
+        },
+        {
+            "_id": "68fe8236c3e0b9b781968254",
+            "title": "User Agreement",
+            "content": "By accessing or using this platform, you agree to abide by our terms and conditions, including data usage, security, and privacy compliance.",
+            "isActive": true,
+            "createdAt": "2025-10-26T20:19:02.121Z",
+            "updatedAt": "2025-10-26T20:19:02.121Z",
+            "__v": 0
+        }
+    ]
+}

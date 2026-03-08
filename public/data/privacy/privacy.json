@@ -1,0 +1,41 @@
+{
+    "success": true,
+    "message": "Privacy Policy retrieved",
+    "data": [
+        {
+            "_id": "1",
+            "title": "Data Collection",
+            "content": "We collect personal information such as name, email address, and activity data to provide a better experience.",
+            "isActive": true,
+            "createdAt": "2025-10-20T20:19:02.121Z"
+        },
+        {
+            "_id": "2",
+            "title": "Data Usage",
+            "content": "Your data is used to improve service functionality, customer support, and user experience personalization.",
+            "isActive": true,
+            "createdAt": "2025-10-20T20:25:02.121Z"
+        },
+        {
+            "_id": "3",
+            "title": "Third-Party Access",
+            "content": "We do not share your personal data with third parties except as required by law or with your explicit consent.",
+            "isActive": true,
+            "createdAt": "2025-10-20T21:10:02.121Z"
+        },
+        {
+            "_id": "4",
+            "title": "Cookies Policy",
+            "content": "We use cookies to improve your browsing experience and analyze site traffic. You can manage your cookie preferences in your browser settings at any time.",
+            "isActive": true,
+            "createdAt": "2025-11-05T10:15:00.000Z"
+        },
+        {
+            "_id": "5",
+            "title": "User Rights",
+            "content": "You have the right to access, update, or delete your personal information. If you wish to exercise these rights, please contact our privacy officer.",
+            "isActive": true,
+            "createdAt": "2025-11-10T14:30:00.000Z"
+        }
+    ]
+}

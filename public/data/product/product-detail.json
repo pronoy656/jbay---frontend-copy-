@@ -1,0 +1,26 @@
+{
+    "title": "Toyota Suspension",
+    "price": "$30.12",
+    "rating": 4.0,
+    "description": "High-quality OEM replacement front bumper for Toyota Corolla. Perfect fit and finish with all mounting hardware included. Features impact-resistant ABS plastic construction with primer finish ready for painting.",
+    "images": [
+        "/images/toyota-suspension-system-full-view.jpg",
+        "/images/toyota-suspension-front-brake-system.jpg",
+        "/images/toyota-suspension-coil-spring-detail.jpg"
+    ],
+    "thumbnails": [
+        "/images/suspension-system.jpg",
+        "/images/brake-system.png",
+        "/images/coil-spring.jpg"
+    ],
+    "specs": {
+        "Brand": "Toyota Genuine",
+        "Category": "Body Parts",
+        "Chassis Number": "ZRE172",
+        "Seller Name": "Shakhowat Hossain",
+        "Seller Rating": "4.0",
+        "Condition": "Used",
+        "Car Model": "Toyota",
+        "Warranty": "1 Year"
+    }
+}

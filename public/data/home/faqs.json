@@ -1,0 +1,56 @@
+{
+    "success": true,
+    "message": "FAQs retrieved successfully",
+    "data": [
+        {
+            "_id": "68fa90016fa0cb61c8308201",
+            "question": "How long does it take to receive my order?",
+            "answer": "Delivery usually takes 1-2 working days within the city and 3-5 working days for nationwide orders. For international shipments, delivery may take 7-14 days, depending on location and courier service.",
+            "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop",
+            "createdAt": "2025-11-07T00:00:00.000Z",
+            "updatedAt": "2025-11-07T00:00:00.000Z",
+            "__v": 0,
+            "isActive": true
+        },
+        {
+            "_id": "68fa90016fa0cb61c8308202",
+            "question": "What payment methods do you accept?",
+            "answer": "We accept all major credit cards, PayPal, Apple Pay, Google Pay, and bank transfers. All transactions are secure and encrypted.",
+            "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&h=400&fit=crop",
+            "createdAt": "2025-11-07T00:00:00.000Z",
+            "updatedAt": "2025-11-07T00:00:00.000Z",
+            "__v": 0,
+            "isActive": true
+        },
+        {
+            "_id": "68fa90016fa0cb61c8308203",
+            "question": "Do you offer returns or exchanges?",
+            "answer": "Yes! You can return or exchange any item within 30 days of delivery. The product must be unused and in original packaging.",
+            "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&h=400&fit=crop",
+            "createdAt": "2025-11-07T00:00:00.000Z",
+            "updatedAt": "2025-11-07T00:00:00.000Z",
+            "__v": 0,
+            "isActive": true
+        },
+        {
+            "_id": "68fa90016fa0cb61c8308204",
+            "question": "Is there a warranty on products?",
+            "answer": "All products come with a minimum 1-year warranty. Extended warranty options are available at checkout.",
+            "image": "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=600&h=400&fit=crop",
+            "createdAt": "2025-11-07T00:00:00.000Z",
+            "updatedAt": "2025-11-07T00:00:00.000Z",
+            "__v": 0,
+            "isActive": true
+        },
+        {
+            "_id": "68fa90016fa0cb61c8308205",
+            "question": "How can I track my order?",
+            "answer": "Once your order ships, you’ll receive a tracking link via email and SMS. You can also track it directly from your account dashboard.",
+            "image": "https://images.unsplash.com/photo-1605732562742-3023a888e56e?w=600&h=400&fit=crop",
+            "createdAt": "2025-11-07T00:00:00.000Z",
+            "updatedAt": "2025-11-07T00:00:00.000Z",
+            "__v": 0,
+            "isActive": true
+        }
+    ]
+}
