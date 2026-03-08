@@ -2,101 +2,102 @@
 // app/(your-route)/HeroSection.tsx
 "use client";
 
-import { useEffect, useState } from "react";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
 import Catagory from "./Catagory";
 import Car from "./Car";
 import StatsSection from "./StatsSection";
-import axiosPublic from "@/utils/axiosPublic";
 
 // -----------------------------------------------------------------
-// Type definitions based on your JSON
+// Static Hero Data to prevent 404 fetch errors on Vercel
 // -----------------------------------------------------------------
-interface Title {
-  line1: string;
-  line2: string;
-  highlight: string;
-}
-
-interface Stat {
-  value: string;
-  label: string;
-}
-
-interface Category {
-  src: string;
-  alt: string;
-  code: string;
-  category: string;
-  description: string;
-}
-
-interface HeroData {
-  title: Title;
-  buttonText: string;
-  carImage: string;
-  stats: Stat[];
-  categories: Category[];
-  exploreButtonText: string;
-  exploreLink: string;
-}
+const HERO_DATA = {
+  title: {
+    line1: "Your Reliable Source",
+    line2: "For Automotive",
+    highlight: "Excellence",
+  },
+  buttonText: "Discover",
+  carImage: "/images/car.png",
+  stats: [
+    { value: "400", label: "Total Accessories" },
+    { value: "4k", label: "Happy Customers" },
+    { value: "400+", label: "Total Rating" },
+  ],
+  categories: [
+    {
+      src: "/images/catagory/1.png",
+      alt: "Car Engine Parts",
+      code: "#01",
+      category: "Engine & Performance",
+      description: "Essential engine components including pistons, spark plugs, and turbochargers for powerful performance.",
+    },
+    {
+      src: "/images/catagory/3.png",
+      alt: "Electrical and Lighting Parts",
+      code: "#03",
+      category: "Electrical & Lighting",
+      description: "High-quality batteries, alternators, and LED lights ensuring bright visibility and reliable power flow.",
+    },
+    {
+      src: "/images/catagory/4.png",
+      alt: "Tires and Wheels",
+      code: "#04",
+      category: "Tires & Wheels",
+      description: "All-season tires and stylish alloy wheels designed for grip, control, and improved performance.",
+    },
+    {
+      src: "/images/catagory/5.png",
+      alt: "Car Body & Exterior",
+      code: "#05",
+      category: "Body & Exterior",
+      description: "Bumpers, mirrors, grilles, and spoilers for enhanced aerodynamics and a bold exterior look.",
+    },
+    {
+      src: "/images/catagory/6.png",
+      alt: "Car Interior Accessories",
+      code: "#06",
+      category: "Interior Accessories",
+      description: "Premium seat covers, steering covers, and floor mats that add comfort and elegance to your car’s cabin.",
+    },
+    {
+      src: "/images/catagory/1.png",
+      alt: "Cooling System Parts",
+      code: "#07",
+      category: "Cooling & Heating",
+      description: "Radiators, condensers, and compressors that help maintain engine temperature and cabin comfort.",
+    },
+    {
+      src: "/images/catagory/2.png",
+      alt: "Transmission and Drivetrain",
+      code: "#08",
+      category: "Transmission & Drivetrain",
+      description: "Clutches, axles, and gearboxes that ensure smooth gear transitions and efficient power delivery.",
+    },
+    {
+      src: "/images/catagory/3.png",
+      alt: "Fuel and Air System",
+      code: "#09",
+      category: "Fuel & Air System",
+      description: "Air filters, fuel pumps, and intakes to boost mileage and engine breathing for better efficiency.",
+    },
+    {
+      src: "/images/catagory/4.png",
+      alt: "Safety and Security Systems",
+      code: "#11",
+      category: "Safety & Security",
+      description: "Parking sensors, airbags, and alarm systems that enhance safety and protection for every journey.",
+    },
+  ],
+  exploreButtonText: "Explore The Product",
+  exploreLink: "/product/1",
+};
 
 // -----------------------------------------------------------------
 // HeroSection Component
 // -----------------------------------------------------------------
 export default function HeroSection() {
-  const [data, setData] = useState<HeroData | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  // -----------------------------------------------------------------
-  // Fetch hero data directly with axios
-  // -----------------------------------------------------------------
-  useEffect(() => {
-    const fetchHeroData = async () => {
-      try {
-        setLoading(true);
-        // Adjust endpoint as per your backend
-        const response = await axiosPublic.get<HeroData>("home/hero.json");
-        setData(response.data);
-        setError(null);
-      } catch (err: any) {
-        setError(err?.response?.data?.message || "Failed to load hero section");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchHeroData();
-  }, []);
-
-  // -----------------------------------------------------------------
-  // Loading state
-  // -----------------------------------------------------------------
-  if (loading) {
-    return (
-      <section className="mt-15 relative min-h-[500px] flex items-center justify-center">
-        <p className="text-gray-500">Loading...</p>
-      </section>
-    );
-  }
-
-  // -----------------------------------------------------------------
-  // Error state
-  // -----------------------------------------------------------------
-  if (error) {
-    return (
-      <section className="mt-15 relative min-h-[500px] flex items-center justify-center">
-        <p className="text-red-500">Error: {error}</p>
-      </section>
-    );
-  }
-
-  // -----------------------------------------------------------------
-  // No data
-  // -----------------------------------------------------------------
-  if (!data) return null;
+  const data = HERO_DATA;
 
   // -----------------------------------------------------------------
   // Main render
